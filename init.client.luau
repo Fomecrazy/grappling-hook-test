@@ -346,8 +346,8 @@ function deployGrapple(): nil
 		local heightFactor = angle > math.rad(90) and -1 or 1;
 
 		-- define velocity variables
-		local momentum = (velocity * MASS * 0.75);
-		local unit = prevUnit:Lerp((attachmentPos - charPos), fps * 0.009);
+		local momentum = (velocity * MASS * 1.2);
+		local unit = prevUnit:Lerp((attachmentPos - charPos), fps * 0.02);
 		local vx = Vector3.new(unit.X * heightFactor, 0, unit.Z * heightFactor) * momentum;
 		local vy = math.sin(angle) * -momentum;
 		local angleDelta = if prevAngle == nil then 0 else angle - prevAngle;
