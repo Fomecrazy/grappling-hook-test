@@ -323,7 +323,7 @@ function deployGrapple(): nil
 		For the physics of the grappling hook we use a RenderStepped for smoothness,
 		inside we calculate the angle between the player's character and the attachment point,
 		which we use to later calculate the player's character angle and vertical velocity.
-		To calculate the velocity we use the momentum equation p = v * m with a 0.75 damper factor
+		To calculate the velocity we use the momentum equation p = v * m with a 1.2 exciter factor
 		and then get the velocity by multiplying the direction unit by the momentum.
 		Next we update the character's AssemblyLinearVelocity directly(not using VectorForce for max control)
 		and update the AlignOrientation to rotate the character to the movement direction.
